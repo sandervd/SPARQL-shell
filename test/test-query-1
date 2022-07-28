@@ -1,0 +1,7 @@
+PREFIX f: <java:eu.europa.ec.sparql.shell.>
+SELECT ?s 
+{ 
+  BIND("# Title\n - Item 1\n - Item 2" as ?t)
+  BIND(f:Exec("pandoc -f markdown -t html", ?t) as ?s)
+
+}

@@ -1,0 +1,7 @@
+PREFIX f: <java:eu.europa.ec.sparql.shell.>
+SELECT ?s 
+{ 
+  BIND("Some test" as ?t)
+  BIND(f:Exec("cat -", ?t) as ?s)
+
+}
